@@ -1,31 +1,38 @@
-package workshop_java;
+package Day3;
 
 public class Employee {
 
-	private int eid;
-	private String name;
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
-	public Employee() {
-		eid=1;
-		name="devanshi";
-	}
-
-	public Employee(int eid, String name) {
+		private String name;
+		private int no;
 		
-		this.eid = eid;
-		this.name = name;
+		public Employee()
+		{
+			no=103;
+			name="Parul";
+		}
+		
+		public Employee(String name, int no) {
+			super();
+			this.name = name;
+			this.no = no;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		@Override
+		public String toString() {
+			return "[Name=" + name + ", No=" + no + "]";
+		}
+		public int getNo() {
+			return no;
+		}
+		public void setNo(int no) {
+			this.no = no;
+		}
+		
 	}
 
 
-	public void setEid(int eid) {
-		this.eid = eid;
-	}
-	public String toString() {
-		return "Employee [eid=" + eid + ", name=" + name + "]";
-	}
-}
